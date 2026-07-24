@@ -4,6 +4,7 @@ from typing import TYPE_CHECKING
 
 from validata.rules.required import RequiredRule
 from validata.rules.email import EmailRule
+from validata.rules.base import BaseRule
 
 
 if TYPE_CHECKING:
@@ -17,15 +18,21 @@ class ColumnBuilder:
 
     def required(self) -> "ColumnBuilder":
 
-        self._validator._add_rule(self._column_name, RequiredRule())
+        self._add_rule(RequiredRule())
 
         return self
     
     def email(self):
 
+        self._add_rule(EmailRule())
+
+        return self
+    
+    def _add_rule(self, rule: BaseRule) -> "ColumnBuilder":
+
         self._validator._add_rule(
             self._column_name,
-            EmailRule()
+            rule
         )
 
         return self
