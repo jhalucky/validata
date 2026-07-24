@@ -49,3 +49,25 @@ def test_email_rule_fails():
             failed_rows=[1]
         )
     ]
+
+
+def test_email_rule_ignore_missing_values():
+
+    df = pd.DataFrame(
+        {
+            "email": [
+                "lucky@example.com",
+                None
+            ]
+        }
+    )
+
+    validator = Validator(df)
+
+    validator.column("email").email()
+
+    result = validator.validate()
+
+    assert result.passed
+
+    
