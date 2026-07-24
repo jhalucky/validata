@@ -1,4 +1,14 @@
 from __future__ import annotations
+from dataclasses import dataclass
+
+
+@dataclass(slots=True)
+class ValidationError:
+    column: str
+    rule: str
+    failed_rows: list[int]
+
+
 
 class ValidationResult:
 
@@ -18,9 +28,10 @@ class ValidationResult:
     ) -> None:
         
         self.errors.append(
-            {
-                "column":column,
-                "rule":rule,
-                "failed_rows":failed_rows
-            }
+            ValidationError(
+                column=column,
+                rule=rule,
+                failed_rows=failed_rows,
+            )
         )
+

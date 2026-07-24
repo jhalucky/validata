@@ -1,6 +1,7 @@
 import pandas as pd
 
 from validata import Validator
+from validata.result import ValidationError
 
 def test_required_rule_passed():
 
@@ -36,9 +37,9 @@ def test_required_rule_fails():
     assert not result.passed
 
     assert result.errors == [
-        {
-            "column":"name",
-            "rule": "required",
-            "failed_rows": [1]
-        }
-    ]
+        ValidationError(
+        column="name",
+        rule="required",
+        failed_rows=[1],
+    )
+]
