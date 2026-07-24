@@ -1,0 +1,97 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "datavalid"
+dynamic = ["version"]
+
+description = "A modern, developer-friendly data validation library for tabular data."
+
+readme = "README.md"
+
+requires-python = ">=3.10"
+
+license = { text = "MIT" }
+
+authors = [
+    { name = "Lucky Jha" }
+]
+
+keywords = [
+    "data-validation",
+    "pandas",
+    "polars",
+    "pyspark",
+    "etl",
+    "data-engineering",
+    "validation",
+    "data-quality"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+
+dev = [
+    "pytest>=8.3",
+    "pytest-cov>=5.0",
+    "ruff>=0.12",
+    "mypy>=1.16",
+    "pre-commit>=4.2",
+]
+
+docs = [
+    "mkdocs-material>=9.6"
+]
+
+[tool.hatch.version]
+path = "src/datavalid/version.py"
+
+[tool.pytest.ini_options]
+
+testpaths = [
+    "tests"
+]
+
+pythonpath = [
+    "src"
+]
+
+addopts = [
+    "-ra",
+    "--strict-markers",
+]
+
+[tool.ruff]
+
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+]
+
+[tool.mypy]
+
+python_version = "3.10"
+
+strict = true
+
+warn_unused_configs = true
