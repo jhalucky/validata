@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from validata.core.builder import ColumnBuilder
+from validata.result import ValidationResult
 
 class Validator:
 
@@ -15,4 +16,32 @@ class Validator:
         return ColumnBuilder(self, column_name)
     
     def _add_rule(self, column_name: str, rule) -> None:
-        return self._rules[column_name].append(rule)
+        self._rules[column_name].append(rule)
+
+
+    def validate(self) -> ValidationResult:
+
+        result = ValidationResult()
+
+        for column_name, rules in self._rules.items():
+
+            series = self._dataframe[column_name]
+
+            for rule in rules:
+
+                failed_rows = rule.validate(
+                    column_name,
+                    series
+                )
+
+                if failed_rows:
+
+                    result.errors.append(
+                        {
+                            "column" : column_name,
+                            "rule": rule.name,
+                            "failed_rows": failed_rows
+                        }
+                    )
+        
+        return result

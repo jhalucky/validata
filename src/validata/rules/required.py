@@ -1,5 +1,19 @@
+from __future__ import annotations
+
+import pandas as pd
+
 from validata.rules.base import BaseRule
 
 class RequiredRule(BaseRule):
 
-    name = "reuired"
+    name = "required"
+
+    def validate(
+            self,
+            column_name: str,
+            series: pd.Series,
+    ) -> list[int]:
+        
+        failed = series[series.isna()]
+
+        return failed.index.tolist()
