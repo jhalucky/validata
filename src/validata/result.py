@@ -8,3 +8,19 @@ class ValidationResult:
     @property
     def passed(self) -> bool:
         return len(self.errors) == 0
+    
+    def add_error(
+            self,
+            *,
+            column: str,
+            rule: str,
+            failed_rows: list[int]
+    ) -> None:
+        
+        self.errors.append(
+            {
+                "column":column,
+                "rule":rule,
+                "failed_rows":failed_rows
+            }
+        )

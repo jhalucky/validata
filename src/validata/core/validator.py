@@ -36,12 +36,10 @@ class Validator:
 
                 if failed_rows:
 
-                    result.errors.append(
-                        {
-                            "column" : column_name,
-                            "rule": rule.name,
-                            "failed_rows": failed_rows
-                        }
+                    result.add_error(
+                        column=column_name,
+                        rule=rule.name,
+                        failed_rows=failed_rows,
                     )
         
         return result
