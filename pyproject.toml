@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "datavalid"
+name = "validata"
 dynamic = ["version"]
 
 description = "A modern, developer-friendly data validation library for tabular data."
@@ -56,7 +56,7 @@ docs = [
 ]
 
 [tool.hatch.version]
-path = "src/datavalid/version.py"
+path = "src/validata/version.py"
 
 [tool.pytest.ini_options]
 
