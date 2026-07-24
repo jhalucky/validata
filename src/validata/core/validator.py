@@ -13,3 +13,6 @@ class Validator:
         self._rules.setdefault(column_name, [])
 
         return ColumnBuilder(self, column_name)
+    
+    def _add_rule(self, column_name: str, rule) -> None:
+        return self._rules[column_name].append(rule)

@@ -16,6 +16,6 @@ class ColumnBuilder:
 
     def required(self) -> "ColumnBuilder":
 
-        self._validator._rules[self._column_name].append(RequiredRule())
+        self._validator._add_rule(self._column_name, RequiredRule())
 
         return self
