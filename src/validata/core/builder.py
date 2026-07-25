@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 
 
 from validata.rules import (
-    BaseRule, EmailRule, RequiredRule, UniqueRule, RegexRule, MinLengthRule, MaxLengthRule, LengthRule
+    BaseRule, EmailRule, RequiredRule, UniqueRule, RegexRule, MinLengthRule, MaxLengthRule, LengthRule, MinimumRule
 )
 
 
@@ -68,4 +68,10 @@ class ColumnBuilder:
 
         return self._add_rule(
             LengthRule(length)
+        )
+    
+    def minimum(self, minimum: int | float) -> "ColumnBuilder":
+
+        return self._add_rule(
+            MinimumRule(minimum)
         )

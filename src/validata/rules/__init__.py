@@ -6,6 +6,8 @@ from validata.rules.regex import RegexRule
 from validata.rules.min_length import MinLengthRule
 from validata.rules.max_length import MaxLengthRule
 from validata.rules.length import LengthRule
+from validata.rules.minimum_rule import MinimumRule
+
 
 __all__ = [
     "BaseRule",
@@ -15,5 +17,6 @@ __all__ = [
     "RegexRule",
     "MinLengthRule",
     "MaxLengthRule"
-    "LengthRule"
+    "LengthRule",
+    "MinimumRule"
 ]
