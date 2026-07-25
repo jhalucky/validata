@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 
 
 from validata.rules import (
-    BaseRule, EmailRule, RequiredRule, UniqueRule, RegexRule, MinLengthRule, MaxLengthRule, LengthRule, MinimumRule, MaximumRule
+    BaseRule, EmailRule, RequiredRule, UniqueRule, RegexRule, MinLengthRule, MaxLengthRule, LengthRule, MinimumRule, MaximumRule, BetweenRule
 )
 
 
@@ -80,4 +80,10 @@ class ColumnBuilder:
 
         return self._add_rule(
             MaximumRule(maximum)
+        )
+    
+    def between(self, minimum: int|float, maximum: int | float) -> "ColumnBuilder":
+
+        return self._add_rule(
+            BetweenRule(minimum, maximum)
         )

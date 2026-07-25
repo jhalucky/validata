@@ -8,6 +8,7 @@ from validata.rules.max_length import MaxLengthRule
 from validata.rules.length import LengthRule
 from validata.rules.minimum_rule import MinimumRule
 from validata.rules.maximum_rule import MaximumRule
+from validata.rules.between import BetweenRule
 
 
 __all__ = [
@@ -20,5 +21,6 @@ __all__ = [
     "MaxLengthRule"
     "LengthRule",
     "MinimumRule",
-    "MaximumRule"
+    "MaximumRule",
+    "BetweenRule"
 ]
