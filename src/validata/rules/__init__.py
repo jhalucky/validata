@@ -7,6 +7,7 @@ from validata.rules.min_length import MinLengthRule
 from validata.rules.max_length import MaxLengthRule
 from validata.rules.length import LengthRule
 from validata.rules.minimum_rule import MinimumRule
+from validata.rules.maximum_rule import MaximumRule
 
 
 __all__ = [
@@ -18,5 +19,6 @@ __all__ = [
     "MinLengthRule",
     "MaxLengthRule"
     "LengthRule",
-    "MinimumRule"
+    "MinimumRule",
+    "MaximumRule"
 ]
