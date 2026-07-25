@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 
 
 from validata.rules import (
-    BaseRule, EmailRule, RequiredRule, UniqueRule
+    BaseRule, EmailRule, RequiredRule, UniqueRule, RegexRule
 )
 
 
@@ -44,4 +44,10 @@ class ColumnBuilder:
 
         return self._add_rule(
             UniqueRule()
+        )
+    
+    def regex(self, pattern: str) -> "ColumnBuilder":
+
+        return self._add_rule(
+            RegexRule(pattern)
         )
