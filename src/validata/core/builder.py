@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 
 
 from validata.rules import (
-    BaseRule, EmailRule, RequiredRule, UniqueRule, RegexRule, MinLengthRule, MaxLengthRule
+    BaseRule, EmailRule, RequiredRule, UniqueRule, RegexRule, MinLengthRule, MaxLengthRule, LengthRule
 )
 
 
@@ -62,4 +62,10 @@ class ColumnBuilder:
 
         return self._add_rule(
             MaxLengthRule(maximum)
+        )
+    
+    def length(self, length: int) -> "ColumnBuilder":
+
+        return self._add_rule(
+            LengthRule(length)
         )
