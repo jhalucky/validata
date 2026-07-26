@@ -18,8 +18,8 @@ nav:
       - Unique: rules/unique.md
       - Email: rules/email.md
       - Regex: rules/regex.md
-      - Min Length: rules/min-length.md
-      - Max Length: rules/max-length.md
+      - Min Length: rules/min_length.md
+      - Max Length: rules/max_length.md
       - Length: rules/length.md
       - Minimum: rules/minimum.md
       - Maximum: rules/maximum.md
