@@ -1,0 +1,19 @@
+site_name: My Docs
+site_name: Veris
+site_description: Lightweight data validation for Python
+site_author: Lucky Jha
+site_url: https://jhalucky.github.io/veris/
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Installation: installation.md
+  - Quick Start: quickstart.md
+  - Validator: validator.md
+  - Rules:
+      - Required: rules/required.md
+      - Unique: rules/unique.md
+      - Email: rules/email.md
