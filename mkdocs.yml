@@ -14,6 +14,14 @@ nav:
   - Quick Start: quickstart.md
   - Validator: validator.md
   - Rules:
+      - Overview: rules.md
       - Required: rules/required.md
       - Unique: rules/unique.md
       - Email: rules/email.md
+      - Regex: rules/regex.md
+      - Min Length: rules/min-length.md
+      - Max Length: rules/max-length.md
+      - Length: rules/length.md
+      - Minimum: rules/minimum.md
+      - Maximum: rules/maximum.md
+      - Between: rules/between.md
