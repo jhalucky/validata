@@ -3,7 +3,7 @@ from __future__ import annotations
 import pandas as pd
 from abc import abstractmethod
 
-from validata.rules.base import BaseRule
+from veris.rules.base import BaseRule
 
 class NumericRule(BaseRule):
 

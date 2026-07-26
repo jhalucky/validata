@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from validata.rules.numeric_rule import NumericRule
+from veris.rules.numeric import NumericRule
 
 class BetweenRule(NumericRule):
 

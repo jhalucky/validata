@@ -1,7 +1,7 @@
 import re
 import pandas as pd
 
-from validata.rules.string_rule import StringRule
+from veris.rules.string_rule import StringRule
 
 class RegexRule(StringRule):
 

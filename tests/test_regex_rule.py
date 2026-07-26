@@ -1,7 +1,7 @@
 import pandas as pd
 
-from validata import Validator
-from validata.result import ValidationError
+from veris import Validator
+from veris.result import ValidationError
 
 
 

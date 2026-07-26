@@ -1,9 +1,9 @@
 import pandas as pd
 import pytest 
 
-from validata import Validator
-from validata.result import ValidationError
-from validata.rules import BetweenRule
+from veris import Validator
+from veris.result import ValidationError
+from veris.rules import BetweenRule
 
 def test_between_rule_passes():
 

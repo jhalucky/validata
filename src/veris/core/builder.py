@@ -4,13 +4,13 @@ from typing import TYPE_CHECKING
 
 
 
-from validata.rules import (
+from veris.rules import (
     BaseRule, EmailRule, RequiredRule, UniqueRule, RegexRule, MinLengthRule, MaxLengthRule, LengthRule, MinimumRule, MaximumRule, BetweenRule
 )
 
 
 if TYPE_CHECKING:
-    from validata.core.validator import Validator
+    from veris.core.validator import Validator
 
 class ColumnBuilder:
 

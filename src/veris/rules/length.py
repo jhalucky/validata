@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import pandas as pd
-from validata.rules.string_rule import StringRule
+from veris.rules.string_rule import StringRule
 
 class LengthRule(StringRule):
 

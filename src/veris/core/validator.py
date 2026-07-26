@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from validata.core.builder import ColumnBuilder
-from validata.result import ValidationResult
+from veris.core.builder import ColumnBuilder
+from veris.result import ValidationResult
 
 class Validator:
 

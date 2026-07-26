@@ -3,10 +3,10 @@ requires = ["hatchling>=1.27.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "validata"
+name = "veris"
 dynamic = ["version"]
 
-description = "A modern, developer-friendly data validation library for tabular data."
+description = "A modern, chalnable data validation library for pandas and tabular data."
 
 readme = "README.md"
 
@@ -15,11 +15,12 @@ requires-python = ">=3.10"
 license = { text = "MIT" }
 
 authors = [
-    { name = "Lucky Jha" }
+    { name = "Lucky Jha", email= "jhalucky61@gmail.com" }
 ]
 
 keywords = [
     "data-validation",
+    "dataframe",
     "pandas",
     "polars",
     "pyspark",
@@ -39,7 +40,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
 ]
 
-dependencies = []
+dependencies = [
+    "pandas>=2.0"
+]
 
 [project.optional-dependencies]
 
@@ -56,7 +59,7 @@ docs = [
 ]
 
 [tool.hatch.version]
-path = "src/validata/version.py"
+path = "src/veris/version.py"
 
 [tool.pytest.ini_options]
 

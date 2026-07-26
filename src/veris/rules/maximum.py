@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import pandas as pd
-from validata.rules.numeric_rule import NumericRule
+from veris.rules.numeric import NumericRule
 
 class MaximumRule(NumericRule):
 

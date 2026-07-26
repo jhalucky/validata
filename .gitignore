@@ -25,3 +25,5 @@ build/
 .vscode/
 
 .DS_Store
+
+.tests/

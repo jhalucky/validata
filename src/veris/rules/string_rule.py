@@ -2,7 +2,7 @@ from __future__  import annotations
 from abc import abstractmethod
 
 import pandas as pd
-from validata.rules.base import BaseRule
+from veris.rules.base import BaseRule
 
 class StringRule(BaseRule):
 

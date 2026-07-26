@@ -1,4 +1,4 @@
-from validata import Validator
+from veris import Validator
 
 def test_column_returns_builder():
     validator = Validator()

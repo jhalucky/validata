@@ -35,3 +35,28 @@ class ValidationResult:
             )
         )
 
+
+    def report(self) -> None:
+
+        print("*" * 50)
+        print("VALIDATION REPORT")
+        print("*"*50)
+
+        status = "PASSED" if self.passed else "FAILED"
+
+        print(f"Status      : {status}")
+        print(f"Total Errors: {len(self.errors)}")
+
+        if self.passed:
+            return
+        
+        print()
+
+        for error in self.errors:
+
+            print("*"*50)
+            print(f"Column      : {error.column}")
+            print(f"Rule        : {error.rule}")
+            print(f"Failed Rows : {error.failed_rows}")
+
+        print("-"*50)
